@@ -1,0 +1,39 @@
+<html>
+     <head>
+         <style>
+            table,th,td {
+               border: 1px solid black;
+            }
+        </style>
+        </head>
+    <body>
+        <h1>
+            All Tasks
+        </h1>
+        <h2>
+            <a href="/">Home</a> <br><br>
+            <a href="/add">Add Tasks</a>
+        </h2>
+        <h3>The available tasks are:
+                <table>
+                    <tr>
+                        <td>Task Name</td>
+                        <td>Due Date</td>
+                        <td>Task Description</td>
+                    </tr>
+                    <% for ( var i =0; i< taskDb.length;i++){ %>
+                        <tr>
+                            <td>
+                                <%= taskDb[i].taskName %>
+                            </td>
+                            <td>
+                                <%= taskDb[i].taskDue %>
+                            </td>
+                            <td>
+                                <%= taskDb[i].taskDesc %>
+                            </td>
+                        </tr>
+                    <% }%>
+            </h3>
+    </body>
+</html>
